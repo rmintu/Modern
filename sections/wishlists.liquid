@@ -18,6 +18,13 @@
       $('.wishlist-row').append(wishlistgrid);
     }
        {% endfor %}
+
+     
+    $('.remove-wishlist').click(function(){
+      var productid = $(this).data("product-id");
+      localStorage.removeItem("wishid_" + productid);
+       $('#wishlist-item-' + productId).remove();
+    });
    });
 </script>
 {% schema %}
