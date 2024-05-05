@@ -3,6 +3,13 @@
   <div class="wishlist-row">
   </div> 
 </div>
+<script>
+   $(document).ready(function(){
+     {% for product in collections.all.products %}
+       {{ product.title }}
+       {% endfor %}
+   });
+</script>
 {% schema %}
   {
     "name": "Wishlists",
