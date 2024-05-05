@@ -2,7 +2,8 @@
 
 <script>
     $(document).ready(function(){
-     $('.wishlist-icon').click(function(){
+     $('.wishlist-icon').click(functione(){
+       e.preventDefault();
        var wishid = $(this).attr("{{ productid }}");
        console.log(wishid);
      })
