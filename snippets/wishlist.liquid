@@ -2,10 +2,9 @@
 
 <script>
     $(document).ready(function(){
-     $('.wishlist-icon').click(function(e){
-       e.preventDefault();
-       var wishid = $(this).attr("id");
-       console.log(wishid);
-     })
+    $('#wishlist_{{ productId }}').click(function(){
+      let wishlistID = "{{ productId }}"; // Corrected the variable assignment
+      localStorage.setItem("wishID-{{ productId }}", wishlistID);
+    });
     })
 </script>
