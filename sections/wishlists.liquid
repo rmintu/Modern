@@ -6,7 +6,7 @@
 <script>
    $(document).ready(function(){
      {% for product in collections.all.products %}
-       var wishid = localStorage.getItem("wishid_{{ productid }}");
+       var wishid = localStorage.getItem("wishid_{{ product.id }}");
        console.log(wishid);
            if(wishid == '{{ product.id }}'){
       var wishlistgrid = `<div class="wishlist-grid" id="wishlist-item-{{ product.id }}">
