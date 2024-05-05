@@ -6,7 +6,8 @@
 <script>
    $(document).ready(function(){
      {% for product in collections.all.products %}
-        localStorage.getItem("wishlist_{{ productid }}");
+       var wishid = localStorage.getItem("wishlist_{{ productid }}");
+       console.log(wishid);
        {% endfor %}
    });
 </script>
