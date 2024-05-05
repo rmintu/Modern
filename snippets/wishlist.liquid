@@ -3,9 +3,8 @@
 <script>
     $(document).ready(function(){
     $('#wishlist_{{ productid }}').click(function(){
-      alert("hello");
       let wishlistID = "{{ productid }}"; // Corrected the variable assignment
-      console.log(wishlistID);
+      localStorage.setItem("wishlist_{{ productid }}", wishlistID);
     });
     });
 </script>
