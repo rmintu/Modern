@@ -4,7 +4,7 @@
     $(document).ready(function(){
     $('#wishlist_{{ productid }}').click(function(){
       alert("hello");
-      let wishlistID = "{{ productId }}"; // Corrected the variable assignment
+      let wishlistID = "{{ card_product.id }}"; // Corrected the variable assignment
       console.log(wishlistID);
     });
     });
