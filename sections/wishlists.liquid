@@ -8,6 +8,15 @@
      {% for product in collections.all.products %}
        var wishid = localStorage.getItem("wishlist_{{ productid }}");
        console.log(wishid);
+           if(wishid == '{{ product.id }}'){
+      var wishlistgrid = `<div class="wishlist-grid" id="wishlist-item-{{ product.id }}">
+                            <a href="{{ product.url }}"><img src="{{ product.featured_image | image_url:width:300, height:300 }}" /></a>
+                            <h2>{{ product.title }}</h2>
+                            <h3>{{ product.price }}</h3>
+                            <button class="remove-wishlist" data-product-id="{{ product.id }}">Remove</button>
+                          </div>`;
+      $('.wishlist-row').append(wishlistgrid);
+    }
        {% endfor %}
    });
 </script>
