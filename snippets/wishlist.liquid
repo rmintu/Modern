@@ -1,1 +1,10 @@
 <button id="wishlist_{{ productid }}" class="wishlist-icon">wishlist</button>
+
+<script>
+    $(document).ready(function(){
+     $('.wishlist-icon').click(function(){
+       var wishid = $(this).attr("{{ productid }}");
+       console.log(wishid);
+     })
+    })
+</script>
